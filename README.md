@@ -48,7 +48,7 @@ Mediante el archivo **main.py**, se implementa una API por medio de las librerí
 ## Links
 
 - [FastAPI para el consumo de la información](https://proyecto-integrador01.onrender.com/docs#/)
-- [Videotutorial del trabajo realizado en YouTube](#)
+- [Videotutorial del trabajo realizado en YouTube](https://youtu.be/F3679Nmhd1E)
 
 
 
