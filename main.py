@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 import pandas as pd
 from modelo import get_recomendacion
 
@@ -80,3 +81,8 @@ def recomendacion(nombre_pelicula: str):
 
     top_peliculas= get_recomendacion(nombre_pelicula)
     return top_peliculas
+
+if __name__ == "__main__":
+    import uvicorn   # Biblioteca de python que ejecutará y servirá a la aplicación FastAPi
+    # Recibe las solictudes HTTP entrantes y enruta a la aplicación FastApi
+    uvicorn.run(app, host="0.0.0.0", port=10000)
