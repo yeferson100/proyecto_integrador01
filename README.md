@@ -32,16 +32,16 @@ Mediante el archivo **main.py**, se implementa una API por medio de las librerí
 
 ### 3. Análisis Exploratorio de Datos [ EDA ]
 
-**EDA.ipynb** .En esta parte se lleva a cabo un análisis estadístico del dataset, esto con el fin de tener un conocimiento más afondo de los diferentes datos, sus relaciones entre sí. por medio de estadística descriptiva, diagramas de barras, histogramas, outliers, correlaciones para así determinar qué información es la más adecuada para llevar a cabo nuestro sistema de recomendación. tambien hace parte de este el pre-procesamiento de datos. por el cual solo se toma el 'overview','comapñia productora' y 'directores' como informacion relevante para entrenar el modelo.
+**EDA.ipynb** .En esta parte se lleva a cabo un análisis estadístico del dataset, esto con el fin de tener un conocimiento más afondo de los diferentes datos, sus relaciones entre sí. por medio de estadística descriptiva, diagramas de barras, histogramas, outliers, correlaciones para así determinar qué información es la más adecuada para llevar a cabo nuestro sistema de recomendación. también hace parte de este el pre-procesamiento de datos. por el cual solo se toma el 'overview','compañía productora', 'género' y 'directores' como información relevante para entrenar el modelo.
 
 
 ### 4. Desarrollo del Modelo de Machine Learning [modelo.py ]
 
-**modelo.py** .En este archivo se encuentra la implementacion de un modelo de Nearest Neighbors para la clasificacion y una matriz TF-IDF para determinar la similitud entre datos por medio de la similitud de coseno.
+**modelo.py** .En este archivo se encuentra la implementación de un modelo de Nearest Neighbors para la clasificación y una matriz TF-IDF para determinar la similitud entre datos por medio de la similitud de coseno.
 
 ## Aspectos a Tener en cuenta en la FastAPI
 
-- para la Funciones  que requieren titulo de la pelicula ingresar la primera letra de cada palabra en mayusculas. ej:'Toy Story'
+- para la Funciones  que requieren titulo de la película ingresar la primera letra de cada palabra en mayúsculas. ej:'Toy Story'
 
 - En la función 'peliculas_idioma', ingresar las abreviaturas del idioma. ej: "inglés" --> "en", "italiano" --> "it".
 
