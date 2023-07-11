@@ -24,7 +24,7 @@ Este proyecto permite realizar consultas por medio de una FastAPI, la cual nos p
 ---
 #### 1.Extracción, Transformación y Carga [ ETL ]
 
- **ETL.py**. Se entrega la información en dos dataset (**movies.csv** y **credits.csv**), se procede a unir en uno y posteriormente se eliminan datos irrelevantes para el proyecto. datos nulos y se crean nuevas variables de información necesarias para nuestras consultas. dando como resultado un nuevo dataset **datos.csv**
+ **ETL.ipynb**. Se entrega la información en dos dataset (**movies.csv** y **credits.csv**), se procede a unir en uno y posteriormente se eliminan datos irrelevantes para el proyecto. datos nulos y se crean nuevas variables de información necesarias para nuestras consultas. dando como resultado un nuevo dataset **datos.csv**
 
 ### 2. Implementación de una FastAPI  [main.py ]
 
@@ -37,17 +37,17 @@ Mediante el archivo **main.py**, se implementa una API por medio de las librerí
 
 ### 4. Desarrollo del Modelo de Machine Learning [modelo.py ]
 
-**model.py** .En este archivo se encuentra la implementacion de un modelo de Nearest Neighbors para la clasificacion y una matriz TF-IDF para determinar la similitud entre datos por medio de la similitud de coseno.
+**modelo.py** .En este archivo se encuentra la implementacion de un modelo de Nearest Neighbors para la clasificacion y una matriz TF-IDF para determinar la similitud entre datos por medio de la similitud de coseno.
 
 ## Aspectos a Tener en cuenta en la FastAPI
 
 - para la Funciones  que requieren titulo de la pelicula ingresar la primera letra de cada palabra en mayusculas. ej:'Toy Story'
-- 
+
 - En la función 'peliculas_idioma', ingresar las abreviaturas del idioma. ej: "inglés" --> "en", "italiano" --> "it".
 
 ## Links
 
-- [FastAPI para el consumo de la informacion](https://movies-recomendation-system-bgw9.onrender.com/docs#/)
+- [FastAPI para el consumo de la información](https://proyecto-integrador01.onrender.com/docs#/)
 - [Videotutorial del trabajo realizado en YouTube](#)
 
 
