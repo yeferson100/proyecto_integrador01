@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.neighbors import NearestNeighbors
 from modelo import get_recomendacion
 
 app = FastAPI()
@@ -12,6 +14,15 @@ def index():
     return "Hola_Mundo"
 
 data=pd.read_csv('datos.csv')
+data1 = pd.read_csv("modelo.csv")
+
+#Instanciar el modelo TF-IDF
+tfidf = TfidfVectorizer(stop_words='english')
+
+#Crear la matriz TF-IDF
+tfidf_matrix = tfidf.fit_transform(data1['tags'])
+nn_model = NearestNeighbors(metric='cosine')
+nn_model.fit(tfidf_matrix)
 
 @app.get("/peliculas_idioma/{Idioma}")
 def peliculas_idioma(Idioma : str):
@@ -78,8 +89,12 @@ def get_director(Director: str):
 
 @app.get('/recomendacion/{nombre_pelicula}')
 def recomendacion(nombre_pelicula: str):
+    
 
-    top_peliculas= get_recomendacion(nombre_pelicula)
+
+
+
+    top_peliculas= get_recomendacion(nombre_pelicula, nn_model, data1)
     return top_peliculas
 
 if __name__ == "__main__":

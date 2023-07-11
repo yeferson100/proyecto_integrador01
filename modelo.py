@@ -18,8 +18,7 @@ tfidf_matrix = tfidf.fit_transform(data['tags'])
 
 #Crear el modelo Nearest Neighbors
 n_neighbors = 5 # Número de vecinos más cercanos a buscar
-nn_model = NearestNeighbors(metric='cosine')
-nn_model.fit(tfidf_matrix)
+
 
 def get_recomendacion(title, nn_model, data, top_n=5):
     # Obtener el índice de la película que coincide con el título
